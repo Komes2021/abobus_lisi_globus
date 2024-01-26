@@ -1,7 +1,7 @@
 from moeximporter import MoexImporter, MoexSecurity, MoexCandlePeriods
 from datetime import date
 import mplfinance as mpf
-def show_kostya_skill(name_company, file_name):
+def load_graph_to_png(name_company, file_name):
     m1 = MoexImporter()
     sec = MoexSecurity(name_company, m1)
     candles_df = sec.getCandleQuotesAsDataFrame(date(2023, 1, 1), date(2024, 1, 24), interval=MoexCandlePeriods.Period1Day, board=None)
